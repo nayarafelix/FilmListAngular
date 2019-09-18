@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 class="text-center">Lista de Filmes</h1>
+  <br>
+  <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Título</th>
+          <th scope="col">Data de Lançamento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let film of films; let id = index">
+          <td>
+              <a [href]="'/filme/'+id">
+                <span class='title'>{{ film.title }}</span>
+              </a>
+          </td>
+          <td>
+              <a [href]="'/filme/'+id">
+                <span class="release_date">{{ film.release_date }}</span>
+              </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
